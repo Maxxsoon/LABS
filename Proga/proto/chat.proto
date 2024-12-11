@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package chat;
+
+// Определение сообщения
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+
+// Определение сервиса
+service Greeter {
+  rpc SayHello(HelloRequest) returns (HelloReply);
+}
+
+option go_package = "github.com/Maxxsoon/LABS";
